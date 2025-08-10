@@ -12,6 +12,34 @@
   });
 
 
+  /*--------------------------------------------------------------
+    Particles Js
+  --------------------------------------------------------------*/
+
+  const particleConfig = {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#ffffff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 5, random: true },
+    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+    move: { enable: true, speed: 6 }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    }
+  },
+  retina_detect: true
+};
+
+// Loop through all elements with class "particles-area"
+document.querySelectorAll('.particles-area').forEach((el) => {
+  particlesJS(el.id, particleConfig);
+});
+
 
 
 
@@ -58,150 +86,7 @@
   }
 
 
-
-
-  //Main Slider 
-  if ($(".main-slider__carousel").length) {
-    $(".main-slider__carousel").owlCarousel({
-      loop: true,
-      animateOut: "fadeOut",
-      animateIn: "fadeIn",
-      margin: 0,
-      nav: true,
-      dots: true,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-right-arrow"></span>',
-        '<span class="icon-right-arrow"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        800: {
-          items: 1,
-        },
-        992: {
-          items: 1,
-        },
-      },
-    });
-  }
-
-
-  //Service One Carousel
-  if ($(".service-one__carousel").length) {
-    $(".service-one__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-right-arrow-1"></span>',
-        '<span class="icon-right-arrow-1"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 4,
-        },
-        1320: {
-          items: 4,
-        },
-      },
-    });
-  }
-
-
-  //Project One Carousel
-  if ($(".project-area__carousel").length) {
-    $(".project-area__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-right-up"></span>',
-        '<span class="icon-right-up"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 1,
-        },
-        992: {
-          items: 1,
-        },
-        1200: {
-          items: 1,
-        },
-        1320: {
-          items: 1,
-        },
-      },
-    });
-  }
-
-
-  //Brand One Carousel
-  if ($(".brand-one__carousel").length) {
-    $(".brand-one__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-left-arrow"></span>',
-        '<span class="icon-next"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        540: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 4,
-        },
-        1320: {
-          items: 5,
-        },
-      },
-    });
-  }
-
-  //Testimonial Two Carousel
+  //Testimonial
   if ($(".testimonial-one__carousel").length) {
     $(".testimonial-one__carousel").owlCarousel({
       loop: true,
@@ -235,73 +120,7 @@
     });
   }
 
-  //Services Two Carousel
-  if ($(".services-two__carousel").length) {
-    $(".services-two__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-right-up"></span>',
-        '<span class="icon-right-up"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 3,
-        },
-        1320: {
-          items: 3,
-        },
-      },
-    });
-  }
 
-  //Project Two Carousel
-  if ($(".project-two__carousel").length) {
-    $(".project-two__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-right-up"></span>',
-        '<span class="icon-right-up"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 4,
-        },
-        1320: {
-          items: 4,
-        },
-      },
-    });
-  }
 
   //Team Two Carousel
   if ($(".team-two__carousel").length) {
@@ -338,174 +157,6 @@
   }
 
 
-  //Testimonial Two Carousel
-  if ($(".testimonial-two__carousel").length) {
-    $(".testimonial-two__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-left-arrow"></span>',
-        '<span class="icon-next"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 1,
-        },
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 2,
-        },
-        1320: {
-          items: 2,
-        },
-      },
-    });
-  }
-
-
-  //Services Three Carousel
-  if ($(".services-three__carousel").length) {
-    $(".services-three__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-left-arrow"></span>',
-        '<span class="icon-right-arrow"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-        1320: {
-          items: 3,
-        },
-      },
-    });
-  }
-
-
-  if ($("#testimonial-three__thumb").length) {
-    let testimonialsThumb = new Swiper("#testimonial-three__thumb", {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      speed: 1400,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      slideToClickedSlide: true,
-      loopedSlides: 4,
-      direction: 'vertical',
-      loop: true,
-      autoplay: {
-        delay: 5000
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 3,
-          spaceBetween: 0
-        },
-        575: {
-          slidesPerView: 3,
-          spaceBetween: 0
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 0
-        },
-
-      }
-    });
-
-    let testimonialsCarousel = new Swiper("#testimonial-three__carousel", {
-      observer: true,
-      observeParents: true,
-      loop: true,
-      speed: 1400,
-      mousewheel: false,
-      slidesPerView: 1,
-      spaceBetween: 72,
-      autoplay: {
-        delay: 5000
-      },
-      thumbs: {
-        swiper: testimonialsThumb
-      },
-      pagination: {
-        el: "#testimonial-three__carousel-pagination",
-        type: "bullets",
-        clickable: true
-      },
-
-      navigation: {
-        nextEl: "#testimonial-three__swiper-button-next",
-        prevEl: "#testimonial-three__swiper-button-prev"
-      }
-    });
-  }
-
-
-  //Brand Two Carousel
-  if ($(".brand-two__carousel").length) {
-    $(".brand-two__carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 7000,
-      navText: [
-        '<span class="icon-left-arrow"></span>',
-        '<span class="icon-next"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        540: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 4,
-        },
-        1320: {
-          items: 5,
-        },
-      },
-    });
-  }
-
-
-
 
 
 
@@ -522,65 +173,6 @@
   }
 
 
-  if ($(".marquee_mode-2").length) {
-    $('.marquee_mode-2').marquee({
-      speed: 30,
-      gap: 0,
-      delayBeforeStart: 0,
-      direction: 'left',
-      duplicated: true,
-      pauseOnHover: true,
-      startVisible: true,
-    });
-  }
-
-
-  if ($(".marquee_mode-3").length) {
-    $('.marquee_mode-3').marquee({
-      speed: 30,
-      gap: 0,
-      delayBeforeStart: 0,
-      direction: 'left',
-      duplicated: true,
-      pauseOnHover: true,
-      startVisible: true,
-    });
-  }
-
-
-
-  // ===Round Progress Script===
-  if ($('.dial').length) {
-    $('.dial').appear(function () {
-      var elm = $(this);
-      var color = elm.attr('data-fgColor');
-      var perc = elm.attr('value');
-      elm.knob({
-        'value': 0,
-        'min': 0,
-        'max': 100,
-        'skin': 'tron',
-        'readOnly': true,
-        'thickness': 0.15,
-        'dynamicDraw': true,
-        'displayInput': false
-      });
-      $({
-        value: 0
-      }).animate({
-        value: perc
-      }, {
-        duration: 2000,
-        easing: 'swing',
-        progress: function () {
-          elm.val(Math.ceil(this.value)).trigger('change');
-        }
-      });
-      $(this).append(function () {});
-    }, {
-      accY: 20
-    });
-  }
 
 
   //Image Reveal Animation
@@ -621,7 +213,6 @@
       let self = $(this);
 
       self.on("mouseenter", function () {
-        console.log($(this));
         $(".project-area__box li").removeClass("active");
         $(this).addClass("active");
       });
@@ -722,27 +313,7 @@
 
 
 
-  $(".contact-form-validated").each(function () {
-    $(this).validate({
-      rules: {
-        email: {
-          required: true,
-          email: true
-        }
-      },
-      submitHandler: function (form) {
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).find(".result").html(response);
-            $(form).find('input[type="text"], input[type="email"], textarea').val("");
-          }
-        );
-        return false;
-      }
-    });
-  });
+
 
 
 
